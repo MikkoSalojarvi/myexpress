@@ -9,6 +9,7 @@ var bookRouter = require('./routes/book');
 var studentRouter = require('./routes/student');
 var courseRouter = require('./routes/course');
 var userRouter = require('./routes/user');
+var loginRouter = require('./routes/login');
 
 const basicAuth = require('express-basic-auth');
 
@@ -29,6 +30,7 @@ app.use('/book', bookRouter);
 app.use('/student', studentRouter);
 app.use('/course', courseRouter);
 app.use('/user', userRouter);
+app.use('/login', loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
